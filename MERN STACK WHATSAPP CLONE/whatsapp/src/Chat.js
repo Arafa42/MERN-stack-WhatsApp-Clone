@@ -34,6 +34,106 @@ function Chat() {
 
 </div>   
 </div>
+
+<div className="chat_body">
+
+<p className="chat_message_sender">
+<span className="chat_name">Arafa</span>
+hello world !
+<span className="chat_time">
+{new Date().toUTCString()}
+</span>
+</p>
+
+<p className="chat_message_sender chat_message_receiver">
+<span className="chat_name">Piccolo</span>
+hello namek !
+<span className="chat_time">
+{new Date().toUTCString()}
+</span>
+</p>
+
+<p className="chat_message_sender">
+<span className="chat_name">Arafa</span>
+Ok.
+<span className="chat_time">
+{new Date().toUTCString()}
+</span>
+</p>
+
+
+
+<p className="chat_message_sender">
+<span className="chat_name">Arafa</span>
+Ok.
+<span className="chat_time">
+{new Date().toUTCString()}
+</span>
+</p><p className="chat_message_sender">
+<span className="chat_name">Arafa</span>
+Ok.
+<span className="chat_time">
+{new Date().toUTCString()}
+</span>
+</p><p className="chat_message_sender">
+<span className="chat_name">Arafa</span>
+Ok.
+<span className="chat_time">
+{new Date().toUTCString()}
+</span>
+</p><p className="chat_message_sender">
+<span className="chat_name">Arafa</span>
+Ok.
+<span className="chat_time">
+{new Date().toUTCString()}
+</span>
+</p><p className="chat_message_sender">
+<span className="chat_name">Arafa</span>
+Ok.
+<span className="chat_time">
+{new Date().toUTCString()}
+</span>
+</p><p className="chat_message_sender">
+<span className="chat_name">Arafa</span>
+Ok.
+<span className="chat_time">
+{new Date().toUTCString()}
+</span>
+</p><p className="chat_message_sender">
+<span className="chat_name">Arafa</span>
+Ok.
+<span className="chat_time">
+{new Date().toUTCString()}
+</span>
+</p><p className="chat_message_sender">
+<span className="chat_name">Arafa</span>
+Ok.
+<span className="chat_time">
+{new Date().toUTCString()}
+</span>
+</p>
+
+<p className="chat_message_sender">
+<span className="chat_name">Arafa</span>
+Ok.
+<span className="chat_time">
+{new Date().toUTCString()}
+</span>
+</p><p className="chat_message_sender">
+<span className="chat_name">Arafa</span>
+Ok.
+<span className="chat_time">
+{new Date().toUTCString()}
+</span>
+</p><p className="chat_message_sender">
+<span className="chat_name">Arafa</span>
+Ok.
+<span className="chat_time">
+{new Date().toUTCString()}
+</span>
+</p>
+
+</div>
 </div>
 );
 }

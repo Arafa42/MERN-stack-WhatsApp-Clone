@@ -1,7 +1,7 @@
 .chat{
 display: flex;
 flex-direction: column;
-flex: 65%;
+flex: 70%;
 }
 
 .chat_avatar{
@@ -22,4 +22,41 @@ color: gray;
 
 .chat_header_icons{
 font-weight: 500;
+}
+
+.chat_body{
+flex: 1;
+background-repeat: repeat;
+background-position:center;
+padding: 30px;
+background-image: url("https://i.pinimg.com/originals/7b/1d/8e/7b1d8e865da2c11b788a21a0fb51d542.jpg");
+overflow: scroll;
+}
+
+.chat_message_sender{
+position: relative;
+background-color:white;
+border-radius: 10px;
+font-size: 16px;
+padding: 10px;
+margin-bottom: 30px;
+width: fit-content;
+}
+
+.chat_message_receiver{
+margin-left: auto;
+background-color: #dcf8c6;
+}
+
+
+.chat_time{
+margin-left: 10px;
+font-size: xx-small;
+}
+
+.chat_name{
+position: absolute;
+top: -15px;
+font-weight: 800;
+font-size: xx-small;
 }
