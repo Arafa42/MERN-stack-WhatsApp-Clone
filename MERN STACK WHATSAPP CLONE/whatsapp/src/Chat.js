@@ -4,6 +4,9 @@ import "./Chat.css";
 import SearchOutlined from "@material-ui/icons/SearchOutlined";
 import AttachFile from "@material-ui/icons/AttachFile";
 import MoreVert from "@material-ui/icons/MoreVert";
+import MicIcon from "@material-ui/icons/Mic";
+import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon";
+
 
 
 
@@ -63,76 +66,16 @@ Ok.
 
 
 
-<p className="chat_message_sender">
-<span className="chat_name">Arafa</span>
-Ok.
-<span className="chat_time">
-{new Date().toUTCString()}
-</span>
-</p><p className="chat_message_sender">
-<span className="chat_name">Arafa</span>
-Ok.
-<span className="chat_time">
-{new Date().toUTCString()}
-</span>
-</p><p className="chat_message_sender">
-<span className="chat_name">Arafa</span>
-Ok.
-<span className="chat_time">
-{new Date().toUTCString()}
-</span>
-</p><p className="chat_message_sender">
-<span className="chat_name">Arafa</span>
-Ok.
-<span className="chat_time">
-{new Date().toUTCString()}
-</span>
-</p><p className="chat_message_sender">
-<span className="chat_name">Arafa</span>
-Ok.
-<span className="chat_time">
-{new Date().toUTCString()}
-</span>
-</p><p className="chat_message_sender">
-<span className="chat_name">Arafa</span>
-Ok.
-<span className="chat_time">
-{new Date().toUTCString()}
-</span>
-</p><p className="chat_message_sender">
-<span className="chat_name">Arafa</span>
-Ok.
-<span className="chat_time">
-{new Date().toUTCString()}
-</span>
-</p><p className="chat_message_sender">
-<span className="chat_name">Arafa</span>
-Ok.
-<span className="chat_time">
-{new Date().toUTCString()}
-</span>
-</p>
 
-<p className="chat_message_sender">
-<span className="chat_name">Arafa</span>
-Ok.
-<span className="chat_time">
-{new Date().toUTCString()}
-</span>
-</p><p className="chat_message_sender">
-<span className="chat_name">Arafa</span>
-Ok.
-<span className="chat_time">
-{new Date().toUTCString()}
-</span>
-</p><p className="chat_message_sender">
-<span className="chat_name">Arafa</span>
-Ok.
-<span className="chat_time">
-{new Date().toUTCString()}
-</span>
-</p>
+</div>
 
+<div className="chat_footer_response">
+<InsertEmoticonIcon/>
+<form>
+<input placeholder="Type a message" type="text"></input>
+<button type="submit">Send a message</button>
+</form>
+<MicIcon/>
 </div>
 </div>
 );

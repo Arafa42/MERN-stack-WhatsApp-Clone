@@ -60,3 +60,32 @@ top: -15px;
 font-weight: 800;
 font-size: xx-small;
 }
+
+.chat_footer_response{
+display: flex;
+justify-content: space-between;
+align-items: center;
+height: 62px;
+border-top: solid lightgrey;
+}
+
+.chat_footer_response > form {
+flex:1;
+display: flex;
+}
+
+.chat_footer_response > form >input{    
+border:none;
+padding: 10px;
+flex: 1;
+border-radius: 30px;
+}
+
+.chat_footer_response > form >button{    
+display: none;
+}
+
+.chat_footer_response > .MuiSvgIcon-root{
+padding: 10px;
+color: gray;    
+}
