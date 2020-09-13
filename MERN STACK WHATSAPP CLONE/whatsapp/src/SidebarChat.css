@@ -6,7 +6,14 @@ border-bottom: 1px solid whitesmoke;
 }
 
 .sidebar_chat:hover{
-
 background-color: whitesmoke;
+}
 
+.sidebar_chat_info > h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.sidebar_chat_info{
+margin-left: 15px;    
 }
