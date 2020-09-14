@@ -7,6 +7,7 @@ timestamp: String,
 received:Boolean,
 });
 
+//collection
 export default mongoose.model("messageContent", whatsappSchema);
 
 
