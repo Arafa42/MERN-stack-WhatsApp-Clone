@@ -3,6 +3,7 @@ import express from "express";
 import mongoose from "mongoose";
 import Messages from "./dbMessages.js";
 import Pusher from "pusher";
+import cors from "cors";
 
 // app config
 const app = express()
@@ -21,6 +22,17 @@ const pusher = new Pusher({
 // middleware
 app.use(express.json());
 
+//CORS MANIER 1
+//app.use((req,res,next) => {
+//res.setHeader("Acces-Control-Allow-Origin", "*");
+//res.setHeader("Acces-Control-Allow-Headers", "*");
+//next();
+//})
+
+//CORS MANIER 2
+app.use(cors());
+
+
 //DB config
 const connection_url = "mongodb+srv://admin:Cp8AeFmt7g8pEi4@cluster0.a7cud.mongodb.net/whatsappdb?retryWrites=true&w=majority";
 
@@ -38,18 +50,28 @@ db.once("open", () => {
 
 console.log("Connected to database...");
 
-const msgCollection = db.collection("messageContent");
+const msgCollection = db.collection("messagecontents");
 const changeStream = msgCollection.watch();
-console.log(changeStream);
 
-changeStream.on("change", (change) =>{
+
+changeStream.on("change", (change) => {
 console.log("A change occured", change);
-})
+
+
+if(change.operationType == "insert"){
+  const messageDetails = change.fullDocument;
+  pusher.trigger("messages","inserted",{
+    name: messageDetails.name,
+    message: messageDetails.message,
+    timestamp: messageDetails.timestamp,
+    received: messageDetails.received
+  })
+}
+else{console.log("Error triggering pusher")}
 
 })
+})
 
-
-//...
 
 // API routes
 

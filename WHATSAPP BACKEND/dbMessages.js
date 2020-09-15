@@ -8,7 +8,7 @@ received:Boolean,
 });
 
 //collection
-export default mongoose.model("messageContent", whatsappSchema);
+export default mongoose.model("messagecontents", whatsappSchema);
 
 
 
