@@ -1,16 +1,34 @@
 import { Avatar, IconButton } from '@material-ui/core';
-import React from 'react';
+import React, { useState } from 'react';
 import "./Chat.css";
 import SearchOutlined from "@material-ui/icons/SearchOutlined";
 import AttachFile from "@material-ui/icons/AttachFile";
 import MoreVert from "@material-ui/icons/MoreVert";
 import MicIcon from "@material-ui/icons/Mic";
 import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon";
+import axios from "./axios.js";
 
 
 
+function Chat({messages}) {
 
-function Chat() {
+const [input, setInput] = useState("");
+
+const sendMessage = async (e) =>{
+//no page refresh    
+e.preventDefault();
+
+await axios.post("/api/v1/messages/new", {
+message: input,
+name: "Demo",
+timestamp: "Just now",
+received: true,
+})
+
+setInput("");
+
+}
+
     return (
 
 <div className="chat">
@@ -40,29 +58,18 @@ function Chat() {
 
 <div className="chat_body">
 
-<p className="chat_message_sender">
-<span className="chat_name">Arafa</span>
-hello world !
+{messages.map((message) => (
+
+<p className={`chat_message_sender ${message.received && "chat_message_receiver"}`}>
+<span className="chat_name">{message.name}</span>
+{message.message}
 <span className="chat_time">
-{new Date().toUTCString()}
+{message.timestamp}
 </span>
 </p>
 
-<p className="chat_message_sender chat_message_receiver">
-<span className="chat_name">Piccolo</span>
-hello namek !
-<span className="chat_time">
-{new Date().toUTCString()}
-</span>
-</p>
+    ))}
 
-<p className="chat_message_sender">
-<span className="chat_name">Arafa</span>
-Ok.
-<span className="chat_time">
-{new Date().toUTCString()}
-</span>
-</p>
 
 
 
@@ -72,8 +79,8 @@ Ok.
 <div className="chat_footer_response">
 <InsertEmoticonIcon/>
 <form>
-<input placeholder="Type a message" type="text"></input>
-<button type="submit">Send a message</button>
+<input value={input} onChange={(e) => setInput(e.target.value)} placeholder="Type a message" type="text"></input>
+<button onClick={sendMessage} type="submit">Send a message</button>
 </form>
 <MicIcon/>
 </div>
