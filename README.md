@@ -2,7 +2,7 @@
 Whatsapp clone (full stack chat application) using MongoDB, Express JS, React and Node JS.
 
 ## SCREENSHOT
-
+![](screenshots/whatsapp-clone.PNG)
 
 ## FRONT END
 
