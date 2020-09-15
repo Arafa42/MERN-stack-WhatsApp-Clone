@@ -20,8 +20,8 @@ e.preventDefault();
 
 await axios.post("/api/v1/messages/new", {
 message: input,
-name: "Demo",
-timestamp: "Just now",
+name: "Piccolo",
+timestamp: "Just now...",
 received: true,
 })
 
@@ -36,7 +36,7 @@ setInput("");
 <Avatar/>
 
 <div className="chat_header_info">
-<h3>Dance room</h3>
+<h3>Hyperbolic time chamber</h3>
 <p>last seen at...</p>
 </div>        
 
